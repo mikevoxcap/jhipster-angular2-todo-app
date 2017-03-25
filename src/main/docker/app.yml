@@ -1,0 +1,31 @@
+#-------------------------------------------------------------------------------
+# Note for using the rate-limiting:
+#   The comment part won't be copied if you use the subgenerator docker-compose
+#   you have to manually copy it
+#-------------------------------------------------------------------------------
+version: '2'
+services:
+    todoapp-app:
+        image: todoapp
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://todoapp-postgresql:5432/ToDoApp
+            - SPRING_DATA_CASSANDRA_CONTACTPOINTS=todoapp-cassandra
+            - JHIPSTER_SLEEP=30 # gives time for the Cassandra cluster to start and execute the migration scripts
+        ports:
+            - 8080:8080
+    todoapp-postgresql:
+        extends:
+            file: postgresql.yml
+            service: todoapp-postgresql
+    # Uncomment to have Cassandra working with the gateway
+    # todoapp-cassandra:
+    #     extends:
+    #         file: cassandra-cluster.yml
+    #         service: todoapp-cassandra
+    # todoapp-cassandra-migration:
+    #     extends:
+    #         file: cassandra-migration.yml
+    #         service: todoapp-cassandra-migration
+    #     environment:
+    #         - CREATE_KEYSPACE_SCRIPT=create-keyspace-prod.cql

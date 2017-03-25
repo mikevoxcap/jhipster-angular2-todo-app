@@ -1,0 +1,11 @@
+version: '2'
+services:
+    todoapp-postgresql:
+        image: postgres:9.5.4
+        # volumes:
+        #     - ~/volumes/jhipster/ToDoApp/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=ToDoApp
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
