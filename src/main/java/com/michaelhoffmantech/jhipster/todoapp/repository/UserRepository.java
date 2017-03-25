@@ -3,6 +3,7 @@ package com.michaelhoffmantech.jhipster.todoapp.repository;
 import com.michaelhoffmantech.jhipster.todoapp.domain.User;
 
 import java.time.ZonedDateTime;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.EntityGraph;
