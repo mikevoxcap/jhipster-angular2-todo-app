@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs/Rx';
     template: `
         <div class="alerts" role="alert">
             <div *ngFor="let alert of alerts"  [ngClass]="{\'alert.position\': true, \'toast\': alert.toast}">
-                <ngb-alert type="{{alert.type}}" close="alert.close(alerts)"><pre>{{ alert.msg }}</pre></ngb-alert>
+                <ngb-alert type="{{alert.type}}" close="alert.close(alerts)"><pre [innerHTML]="alert.msg"></pre></ngb-alert>
             </div>
         </div>`
 })
@@ -37,8 +37,12 @@ export class JhiAlertErrorComponent implements OnDestroy {
                         }
                     }
                     headers.sort();
-                    let errorHeader = httpResponse.headers.get(headers[0]);
-                    let entityKey = httpResponse.headers.get(headers[1]);
+                    let errorHeader = null;
+                    let entityKey = null;
+                    if (headers.length > 1) {
+                        errorHeader = httpResponse.headers.get(headers[0]);
+                        entityKey = httpResponse.headers.get(headers[1]);
+                    }
                     if (errorHeader) {
                         let entityName = entityKey;
                         this.addErrorAlert(errorHeader, errorHeader, {entityName: entityName});

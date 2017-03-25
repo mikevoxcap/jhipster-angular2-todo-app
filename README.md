@@ -102,8 +102,6 @@ Command: ng generate component test-component
 
 I ran into several issues, one of them being the difference in CLI versions installed locally and globally. 
 
-This is a link to an issue with environmentSource missing : [https://github.com/valor-software/ng2-dragula/issues/591](https://github.com/valor-software/ng2-dragula/issues/591). 
-
 Here are some helpful commands for cleaning up and restarting:
 
 	npm uninstall -g @angular/cli
@@ -113,7 +111,11 @@ Here are some helpful commands for cleaning up and restarting:
 	npm install --save-dev @angular/cli@latest
 	npm install
 
+I eventually was able to upgrade the application itself using the command below. Note, you have to make sure all resources have been committed if using Git.
 
+	yo jhipster-upgrade
+
+After I upgraded, I was able to successfully run the ng generate component command. 
 	
 ## 5.2 - Java Assets
 

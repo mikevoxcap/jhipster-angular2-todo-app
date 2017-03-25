@@ -21,7 +21,11 @@
         "content/css/main.css"
       ],
       "scripts": [],
-      "environments": {}
+      "environmentSource" : "app/environments/environment.ts",
+      "environments": {
+          "dev": "app/environments/environment.ts",
+          "prod": "app/environments/environment.ts"
+      }
     }
   ],
   "addons": [],
