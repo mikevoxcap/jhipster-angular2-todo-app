@@ -41,23 +41,23 @@ With JHipster installed, the next step was to run the generator. I followed thes
 	yo jhipster
 4. I then used the following entries for inputs:
 
-	? (1/15) Which *type* of application would you like to create? Microservice gateway
-	? (2/15) What is the base name of your application? ToDoApp
-	? (3/15) Would you like to install other generators from the JHipster Marketplace? No
-	? (4/15) As you are running in a microservice architecture, on which port would like your server to run? It should be unique to avoid port conflicts. 8080
-	? (5/15) What is your default Java package name? com.michaelhoffmantech.jhipster.todoapp
-	? (6/15) Which *type* of authentication would you like to use? JWT authentication (stateless, with a token)
-	? (7/15) Which Service Discovery and Configuration solution would you like to use? No Service Discovery and Configuration
-	? (8/15) Which *type* of database would you like to use? SQL (H2, MySQL, MariaDB, PostgreSQL, Oracle, MSSQL)
-	? (9/15) Which *production* database would you like to use? PostgreSQL
-	? (10/15) Which *development* database would you like to use? H2 with disk-based persistence
-	? (11/15) Do you want to use Hibernate 2nd level cache? No
-	? (12/15) Would you like to use Maven or Gradle for building the backend? Gradle
-	? (13/15) Which other technologies would you like to use? (Press <space> to select, <a> to toggle all, <i> to inverse selection)
-	? (14/15) Which *Framework* would you like to use for the client? [BETA] Angular 2.x
-	? (15/15) Would you like to use the LibSass stylesheet preprocessor for your CSS? Yes
-	? (16/15) Would you like to enable internationalization support? No
-	? (17/15) Besides JUnit and Karma, which testing frameworks would you like to use? Protractor
+* (1/15) Which *type* of application would you like to create? Microservice gateway
+* (2/15) What is the base name of your application? ToDoApp
+* (3/15) Would you like to install other generators from the JHipster Marketplace? No
+* (4/15) As you are running in a microservice architecture, on which port would like your server to run? It should be unique to avoid port conflicts. 8080
+* (5/15) What is your default Java package name? com.michaelhoffmantech.jhipster.todoapp
+* (6/15) Which *type* of authentication would you like to use? JWT authentication (stateless, with a token)
+* (7/15) Which Service Discovery and Configuration solution would you like to use? No Service Discovery and Configuration
+* (8/15) Which *type* of database would you like to use? SQL (H2, MySQL, MariaDB, PostgreSQL, Oracle, MSSQL)
+* (9/15) Which *production* database would you like to use? PostgreSQL
+* (10/15) Which *development* database would you like to use? H2 with disk-based persistence
+* (11/15) Do you want to use Hibernate 2nd level cache? No
+* (12/15) Would you like to use Maven or Gradle for building the backend? Gradle
+* (13/15) Which other technologies would you like to use? (Press <space> to select, <a> to toggle all, <i> to inverse selection)
+* (14/15) Which *Framework* would you like to use for the client? [BETA] Angular 2.x
+* (15/15) Would you like to use the LibSass stylesheet preprocessor for your CSS? Yes
+* (16/15) Would you like to enable internationalization support? No
+* (17/15) Besides JUnit and Karma, which testing frameworks would you like to use? Protractor
 	
 A few notes regarding the selections I made:
 
